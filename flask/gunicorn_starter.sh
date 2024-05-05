@@ -4,7 +4,7 @@
 if [ "$APP_ENV" = "development" ]; then
     echo -n "Waiting for the DBMS to accept connection "
     while [ 1 ]; do
-        if nc -vz postgres "$DATABASE_PORT"; then
+        if nc -vz database "$DATABASE_PORT"; then
             break
         fi
         echo -n "."

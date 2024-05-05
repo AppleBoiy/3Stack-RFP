@@ -17,9 +17,7 @@ def create_db():
 
 @cli.command("seed_db")
 def seed_db():
-    db.session.add(
-        Greet(msg="Hello From Flask!")
-    )
+    db.session.add(Greet(msg="Hello From Flask!"))
     db.session.commit()
 
 

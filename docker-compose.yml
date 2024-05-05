@@ -1,8 +1,17 @@
 version: "3.9"
-name: "flask-app"
+name: "3stack-rfp"
 services:
-  flask:
-    container_name: flask
+  frontend:
+    container_name: frontend
+    build: frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
+  backend:
+    container_name: backend
     build: flask
     ports:
       - "56733:8000"
@@ -11,9 +20,9 @@ services:
     env_file:
       - .env.dev
     depends_on:
-      - postgres
-  postgres:
-    container_name: postgres
+      - database
+  database:
+    container_name: database
     image: postgres:13-alpine
     ports:
       - "5432:5432"

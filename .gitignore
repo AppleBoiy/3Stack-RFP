@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/flask,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=flask,macos
+# Created by https://www.toptal.com/developers/gitignore/api/react,macos,flask
+# Edit at https://www.toptal.com/developers/gitignore?templates=react,macos,flask
 
 ### Flask ###
 instance/*
@@ -200,6 +200,21 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-# End of https://www.toptal.com/developers/gitignore/api/flask,macos
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 postgres_data/
+
+# End of https://www.toptal.com/developers/gitignore/api/react,macos,flask

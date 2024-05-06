@@ -9,3 +9,15 @@ class Greet(db.Model, SerializerMixin):
 
     def __init__(self, msg):
         self.msg = msg
+
+    @staticmethod
+    def all():
+        """
+        Retrieve all conversations from the database.
+
+        Returns:
+            list: A list of dictionaries representing conversations.
+        """
+        conversations = Greet.query.all()
+        return conversations
+

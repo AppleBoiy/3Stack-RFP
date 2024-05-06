@@ -2,9 +2,15 @@ import os
 from flask import Flask
 from werkzeug.debug import DebuggedApplication
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
+
+from flask_cors import CORS
+
 
 app = Flask(__name__, static_folder="static")
+
+# CORS(app, resources={r"*": {"origins": "*"}})
+# CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app)
 
 app.url_map.strict_slashes = False
 
@@ -19,9 +25,5 @@ if app.debug:
 
 # Creating an SQLAlchemy instance
 db = SQLAlchemy(app)
-
-# login_manager = LoginManager()
-# login_manager.login_view = "url_for_login_page"
-# login_manager.init_app(app)
 
 from app import views  # noqa

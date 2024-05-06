@@ -1,0 +1,24 @@
+.email-confirmation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.email-confirmation-content {
+  margin-top: 20px;
+}
+
+.email-confirmation-content h2 {
+  color: #333;
+}
+
+.email-confirmation-content p {
+  color: #666;
+  margin-bottom: 10px;
+}
+.email-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}

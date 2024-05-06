@@ -3,7 +3,14 @@ from flask import Flask
 from werkzeug.debug import DebuggedApplication
 from flask_sqlalchemy import SQLAlchemy
 
+from flask_cors import CORS
+
+
 app = Flask(__name__, static_folder="static")
+
+# CORS(app, resources={r"*": {"origins": "*"}})
+# CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app)
 
 app.url_map.strict_slashes = False
 

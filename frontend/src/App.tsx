@@ -2,32 +2,28 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import LoginPage from "./components/LoginPage";
-import RegisterPage from "./components/RegisterPage";
-import ResetPasswordPage from "./components/ResetPasswordPage";
 import HomePage from "./components/HomePage";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import ConfirmationPage from "./components/ConfirmationPage";
-import EmailConfirmationPage from "./components/EmailConfirmationPage";
+import MessagesPage from "./components/MessagesPage";
+import SendMessagePage from "./components/SendMessagePage";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Router>
-        <Navigation />
-        <div className="container">
+      <div className="container">
+        <Router>
+          <Navigation />
+
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/reset" element={<ResetPasswordPage />} />
-            <Route path="/waiting" element={<EmailConfirmationPage />} />
-            <Route path="/confirmed" element={<ConfirmationPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/send_message" element={<SendMessagePage />} />
           </Routes>
-        </div>
-        <Footer />
-      </Router>
+        </Router>
+      </div>
+
+      <Footer />
     </div>
   );
 };

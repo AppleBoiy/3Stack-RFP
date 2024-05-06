@@ -10,6 +10,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ConfirmationPage from "./components/ConfirmationPage";
 import EmailConfirmationPage from "./components/EmailConfirmationPage";
+
 const App: React.FC = () => {
   return (
     <div>

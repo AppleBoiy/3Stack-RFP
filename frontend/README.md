@@ -13,7 +13,6 @@ My React Application is a web application built with React that provides various
 - **Waiting Confirmation**: Informs users to check their email for confirmation.
 - **Confirmation**: Displays a confirmation message after successful registration.
 
-
 ## Installation
 
 ### Using Docker Compose
@@ -33,6 +32,7 @@ This command will build the Docker image and start the container. The applicatio
    ```shell
    docker compose down
    ```
+
 ### Using Dockerfile
 
 1. Clone this repository to your local machine.

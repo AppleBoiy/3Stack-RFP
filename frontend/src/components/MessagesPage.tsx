@@ -46,7 +46,7 @@ const MessagesPage = () => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
-    setStartIndex(0); // Reset start index when search term changes
+    setStartIndex(0);
   };
 
   if (loading) {

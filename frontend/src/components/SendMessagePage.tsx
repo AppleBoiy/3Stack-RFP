@@ -12,8 +12,19 @@ const SendMessagePage = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(process.env.REACT_APP_API_URL);
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/send`, {
+        message: message
+      });
+      setResponse(response.data.message);
+      setMessage("");
+      setError(null);
+    } catch (error) {
+      setError("Failed to send message. Please try again later.");
+      setResponse(null);
+    }
   };
+
 
   return (
     <div className="send-message-container">

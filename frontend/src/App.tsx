@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from './components/Footer'
 
 import HomePage from "./components/HomePage";
 import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
 import MessagesPage from "./components/MessagesPage";
 import SendMessagePage from "./components/SendMessagePage";
 
@@ -22,7 +22,6 @@ const App: React.FC = () => {
           </Routes>
         </Router>
       </div>
-
       <Footer />
     </div>
   );

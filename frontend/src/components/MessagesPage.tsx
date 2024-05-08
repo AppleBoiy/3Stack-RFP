@@ -27,14 +27,14 @@ const MessagesPage = () => {
   }, []);
 
   const handleNextClick = () => {
-    if (startIndex + 5 < messages.length) {
-      setStartIndex((prevIndex) => prevIndex + 5);
+    if (startIndex + 4 < messages.length) {
+      setStartIndex((prevIndex) => prevIndex + 4);
     }
   };
 
   const handleBackClick = () => {
-    if (startIndex - 5 >= 0) {
-      setStartIndex((prevIndex) => prevIndex - 5);
+    if (startIndex - 4 >= 0) {
+      setStartIndex((prevIndex) => prevIndex - 4);
     }
   };
 
@@ -42,7 +42,7 @@ const MessagesPage = () => {
     .filter((message) =>
       message.msg.toLowerCase().includes(searchTerm.toLowerCase()),
     )
-    .slice(startIndex, startIndex + 5)
+    .slice(startIndex, startIndex + 4)
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -68,6 +68,10 @@ const MessagesPage = () => {
           value={searchTerm}
           onChange={handleSearchChange}
         />
+        <div className="button-container">
+          <button onClick={handleBackClick}>Back</button>
+          <button onClick={handleNextClick}>Next</button>
+        </div>
       </div>
 
       {displayedMessages.length === 0 ? (
@@ -80,10 +84,6 @@ const MessagesPage = () => {
               <p>{message.msg}</p>
             </div>
           ))}
-          <div className="button-container">
-            <button onClick={handleBackClick}>Back</button>
-            <button onClick={handleNextClick}>Next</button>
-          </div>
         </>
       )}
     </div>

@@ -38,7 +38,7 @@ The application consists of three main services:
 5. Access the application in your web browser:
 
     - Frontend: [http://localhost:3000](http://localhost:3000)
-    - Backend API: [http://localhost:8000/api](http://localhost:8000/api)
+    - Backend API: [http://localhost:56733](http://localhost:56733)
     - Database: PostgreSQL database running on port 5432
 
 ## License
